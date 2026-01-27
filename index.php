@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0"> <!-- meta: viewport janela de exibição, content ajuste da telas no aparelhos, e a escala
         é para nivel de zoom 1.0 = 100% -->
     <title>Evolvere Soluções Estratégicas</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- stylesheet: relaciona a folha de estilo de css e o hrf é o caminho para estilizar a pag-->
+    <link rel="stylesheet" href="style.css"> <!-- stylesheet: relaciona a folha de estilo de css e o hrf é o caminho para estilizar a pag-->
     <script src="https://kit.fontawesome.com/3efbfb5430.js" crossorigin="anonymous"></script>
 
 </head>
