@@ -4,8 +4,9 @@
     <meta charset="utf-8"> <!-- tag meta é usada dentro do head para fornecer metadados (informações do site que não pe visivel) -->
     <meta name="viewport" content="width=device-width, initial-scale = 1.0"> <!-- meta: viewport janela de exibição, content ajuste da telas no aparelhos, e a escala
         é para nivel de zoom 1.0 = 100% -->
+    <meta name="description" content="A Evolvere Soluções Estratégicas une visão estratégica, contabilidade e TI para apoiar o crescimento de MEIs e pequenas empresas.">
     <title>Evolvere Soluções Estratégicas</title>
-    <link rel="stylesheet" href="style.css"> <!-- stylesheet: relaciona a folha de estilo de css e o hrf é o caminho para estilizar a pag-->
+    <link rel="stylesheet" href="css/style.css"> <!-- stylesheet: relaciona a folha de estilo de css e o hrf é o caminho para estilizar a pag-->
     <script src="https://kit.fontawesome.com/3efbfb5430.js" crossorigin="anonymous"></script>
 
 </head>
@@ -21,9 +22,15 @@
                 <img src="logo_elvovere.png" alt="Logo Evolvere">
                 Evolvere
             </h1>
+            
+            <!-- Botão Menu Sanduíche (Mobile) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
             <nav>
                 <!-- A tag <nav> define uma área de navegação. É onde ficam os menus que ajudam o usuário a se mover pela página -->
-                <ul class="menu">
+                <ul class="menu" id="menuNav">
                     <!-- lista não ordenada -->
                     <li><a href="#inicio">Inicio</a></li> <!-- o li é o item de lista e o href é o link que leva a seção com id própia da página -->
                     <li><a href="#quem-somos">Quem Somos</a></li> <!-- Esses links criam a navegação por âncora, ou seja, quando você clica em um deles, a página rola automaticamente até aquela parte. -->
@@ -59,11 +66,11 @@
         <div class="container">
             <!-- ALTERADO: usa divs (sem spans) e grid -->
             <div class="sobre-img">
-                <img src="img_casal.jpg" alt="Foto fundadores">
+                <img src="imagem_casal.jpeg" alt="Foto fundadores">
             </div>
             <div class="sobre-texto">
                 <h3>Quem Somos</h3>
-                <p>Somos a Evolvere, uma empresa fundada por um casal com formação em Administração, Contabilidade e TI. Unimos visão estratégica e tecnologia para apoiar o crescimento de MEIs e pequenas empresas.</p>
+                <p>"A Evolvere é fruto da parceria de especialistas apaixonados por Administração, Contabilidade e Tecnologia. Unimos o cuidado de um atendimento próximo à robustez da inteligência de negócios, fornecendo as ferramentas exatas para que sua empresa prospere."</p>
             </div>
         </div>
     </section>
@@ -81,7 +88,7 @@
 
                     <div class="card-parceiro">
                         <div class="logo-area">
-                            <img src="caminho/da/sua/logo1.png" alt="Inova">
+                            <img src="logo-cardsinova.webp" alt="Inova">
                         </div>
                         <h4>Cards Inova</h4>
                     </div>
@@ -99,21 +106,6 @@
                         </div>
                         <h4>Outro Parceiro</h4>
                     </div>
-
-                    <div class="card-parceiro">
-                        <div class="logo-area">
-                            <img src="caminho/da/sua/logo3.png" alt="Parceiro">
-                        </div>
-                        <h4>Outro Parceiro</h4>
-                    </div>
-
-                    <div class="card-parceiro">
-                        <div class="logo-area">
-                            <img src="caminho/da/sua/logo3.png" alt="Parceiro">
-                        </div>
-                        <h4>Outro Parceiro</h4>
-                    </div>
-
                 </div> <button id="nextBtn" class="nav-btn next-btn">&#10095;</button>
             </div>
         </div>
@@ -133,30 +125,23 @@
 
                     <div class="card-cliente">
                         <div class="logo-area">
-                            <img src="logo-burguer.png" alt="00 Burguer">
+                            <img src="logo-00burguer.png" alt="00 Burguer">
                         </div>
                         <h4>00 Burguer</h4>
                     </div>
 
                     <div class="card-cliente">
                         <div class="logo-area">
-                            <img src="logo-fm.png" alt="FM Solutions">
+                            <img src="logo-fm-solutions.jpeg" alt="FM Solutions">
                         </div>
                         <h4>FM Solutions</h4>
                     </div>
 
                     <div class="card-cliente">
                         <div class="logo-area">
-                            <img src="logo-tg.png" alt="TG Rh">
+                            <img src="logo-tg-rh.png" alt="TG Rh">
                         </div>
                         <h4>TG Rh</h4>
-                    </div>
-
-                    <div class="card-cliente">
-                        <div class="logo-area">
-                            <img src="logo-teste.png" alt="Teste 2">
-                        </div>
-                        <h4>Teste 2</h4>
                     </div>
                 </div>
                 <button id="nextBtnClientes" class="nav-btn next-btn">&#10095;</button>
@@ -222,7 +207,7 @@
     <section id="feedback" class="secao-feedback">
         <div class="container">
 
-            <h3 class="titulo_solucao">O que dizem nossos clientes</h3>
+            <h3 class="titulo_solucao">Empresas que estão evoluindo com a Evolvere</h3>
 
             <div class="feedback-wrapper">
                 <button id="btnFeedPrev" class="feed-nav prev">&#10094;</button>
@@ -235,7 +220,7 @@
                             A equipe foi excepcional. Conseguiram resolver um problema tributário que tínhamos há anos em questão de semanas. Recomendo muito!
                         </p>
                         <div class="autor-info">
-                            <img src="https://via.placeholder.com/50" alt="Foto Cliente" class="autor-img">
+                            <!-- <img src="https://via.placeholder.com/50" alt="Foto Cliente" class="autor-img"> -->
                             <div>
                                 <span class="autor-nome">Carlos Almeida</span>
                                 <span class="autor-empresa">Diretor, Empresa X</span>
@@ -249,7 +234,6 @@
                             Profissionalismo nota 10. O sistema que implementaram otimizou nosso tempo em 40%. O suporte pós-venda também é excelente.
                         </p>
                         <div class="autor-info">
-                            <img src="https://via.placeholder.com/50" alt="Foto Cliente" class="autor-img">
                             <div>
                                 <span class="autor-nome">Mariana Souza</span>
                                 <span class="autor-empresa">Gerente, Logística Y</span>
@@ -263,7 +247,6 @@
                             Melhor investimento que fizemos este ano. A consultoria jurídica nos salvou de um processo trabalhista complicado.
                         </p>
                         <div class="autor-info">
-                            <img src="https://via.placeholder.com/50" alt="Foto Cliente" class="autor-img">
                             <div>
                                 <span class="autor-nome">Roberto Firmino</span>
                                 <span class="autor-empresa">CEO, Tech Solutions</span>
@@ -420,6 +403,25 @@
         target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <!-- Menu Mobile Script -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuNav = document.getElementById('menuNav');
+
+        if (menuToggle && menuNav) {
+            menuToggle.addEventListener('click', () => {
+                menuNav.classList.toggle('active');
+            });
+
+            // Fecha o menu ao clicar em algum link
+            menuNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuNav.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
