@@ -6,7 +6,7 @@
         é para nivel de zoom 1.0 = 100% -->
     <meta name="description" content="A Evolvere Soluções Estratégicas une visão estratégica, contabilidade e TI para apoiar o crescimento de MEIs e pequenas empresas.">
     <title>Evolvere Soluções Estratégicas</title>
-    <link rel="stylesheet" href="style.css"> <!-- stylesheet: relaciona a folha de estilo de css e o hrf é o caminho para estilizar a pag-->
+    <link rel="stylesheet" href="css/style.css"> <!-- stylesheet: relaciona a folha de estilo de css e o hrf é o caminho para estilizar a pag-->
     <script src="https://kit.fontawesome.com/3efbfb5430.js" crossorigin="anonymous"></script>
 
 </head>
@@ -55,96 +55,7 @@
                 <a href="#solucoes" class="btn">Conheça as Soluções</a>
             </div>
             <div class="hero-img">
-                <img src="dashboard_exemplo.png" alt="dashboard de exemplo">
-
-            </div>
-        </div>
-    </section>
-
-    <!-- quem somos -->
-    <section id="quem-somos" class="sobre">
-        <div class="container">
-            <!-- ALTERADO: usa divs (sem spans) e grid -->
-            <div class="sobre-img">
-                <img src="imagem_casal.jpeg" alt="Foto fundadores">
-            </div>
-            <div class="sobre-texto">
-                <h3>Quem Somos</h3>
-                <p>"A Evolvere é fruto da parceria de especialistas apaixonados por Administração, Contabilidade e Tecnologia. Unimos o cuidado de um atendimento próximo à robustez da inteligência de negócios, fornecendo as ferramentas exatas para que sua empresa prospere."</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Parceiros -->
-    <section id="parceiro" class="nosso-parceiro">
-        <div class="container-parceiros">
-            <h3 class="titulo_solucao">Nossos Parceiros</h3>
-
-            <div class="slider-wrapper">
-
-                <button id="prevBtn" class="nav-btn prev-btn">&#10094;</button>
-
-                <div class="cards-slider" id="slider">
-
-                    <div class="card-parceiro">
-                        <div class="logo-area">
-                            <img src="logo-cardsinova.webp" alt="Inova">
-                        </div>
-                        <h4>Cards Inova</h4>
-                    </div>
-
-                    <div class="card-parceiro">
-                        <div class="logo-area">
-                            <img src="caminho/da/sua/logo2.png" alt="Advogada">
-                        </div>
-                        <h4>Advogada Fulana</h4>
-                    </div>
-
-                    <div class="card-parceiro">
-                        <div class="logo-area">
-                            <img src="caminho/da/sua/logo3.png" alt="Parceiro">
-                        </div>
-                        <h4>Outro Parceiro</h4>
-                    </div>
-                </div> <button id="nextBtn" class="nav-btn next-btn">&#10095;</button>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- clientes -->
-    <section id="cliente" class="nosso-cliente">
-        <div class="container-parceiros">
-            <h3 class="titulo_solucao">Conheça nossos Clientes</h3>
-
-            <div class="slider-wrapper">
-
-                <button id="prevBtnClientes" class="nav-btn prev-btn">&#10094;</button>
-
-                <div class="cards-slider" id="slider-clientes">
-
-                    <div class="card-cliente">
-                        <div class="logo-area">
-                            <img src="logo-00burguer.png" alt="00 Burguer">
-                        </div>
-                        <h4>00 Burguer</h4>
-                    </div>
-
-                    <div class="card-cliente">
-                        <div class="logo-area">
-                            <img src="logo-fm-solutions.jpeg" alt="FM Solutions">
-                        </div>
-                        <h4>FM Solutions</h4>
-                    </div>
-
-                    <div class="card-cliente">
-                        <div class="logo-area">
-                            <img src="logo-tg-rh.png" alt="TG Rh">
-                        </div>
-                        <h4>TG Rh</h4>
-                    </div>
-                </div>
-                <button id="nextBtnClientes" class="nav-btn next-btn">&#10095;</button>
+                <img src="hero_dashboard.png" alt="Dashboard moderno financeiro e estratégico Evolvere">
             </div>
         </div>
     </section>
@@ -153,7 +64,8 @@
     <section id="solucoes" class="servicos">
         <div class="container">
             <div>
-                <h3 class="titulo_solucao">Soluções Evolvere</h3>
+                <span class="section-badge">Soluções</span>
+                <h3 class="titulo_solucao">Seu crescimento, começa com as soluções Evolvere</h3>
                 <div class="cards">
                     <div class="card" onclick="toggleCard(this)">
                         <div class="card-header">
@@ -199,6 +111,164 @@
                         <i class="fa-solid fa-chevron-down setinha"></i>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- planos -->
+    <section id="planos" class="secao-planos">
+        <div class="container">
+            <span class="section-badge">Serviços</span>
+            <h3 class="titulo_solucao" style="text-align: left; margin-bottom: 30px;">Soluções em Certificados Digitais</h3>
+            
+            <div class="planos-grid">
+                <!-- Card Principal (Esquerda) -->
+                <div class="plano-destaque">
+                    <div class="destaque-icone"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>Certificado Digital para CPF e CNPJ</h4>
+                    <p>Sua identidade digital para assinar documentos, acessar sistemas governamentais e realizar operações com validade jurídica.</p>
+                    
+                    <ul class="destaque-lista">
+                        <li><i class="fa-regular fa-circle-check"></i> Assinatura digital com validade legal</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Acesso ao Gov.br e Receita Federal</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Mais segurança para transações online</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Atendimento em todo o Brasil</li>
+                    </ul>
+
+                    <div class="destaque-extra">
+                        <h5>Outras soluções disponíveis</h5>
+                        <div class="extra-tags">
+                            <span>NF-e A1/A3</span>
+                            <span>NFC-e A1/A3</span>
+                            <span>CT-e A1/A3</span>
+                            <span>e-PF</span>
+                        </div>
+                        <p>Precisa de uma solução específica? Nossa equipe ajuda você a escolher o certificado ideal para sua atividade.</p>
+                    </div>
+                </div>
+
+                <!-- Cards Menores (Direita) -->
+                <div class="planos-secundarios">
+                    <!-- Plano 1 -->
+                    <div class="plano-card">
+                        <div class="plano-header">
+                            <h5>e-CPF A1</h5>
+                            <span class="tag-tipo">Pessoa Física</span>
+                        </div>
+                        <p>Instalado diretamente no computador. Ideal para profissionais liberais, autônomos e contribuintes.</p>
+                        <p class="validade"><i class="fa-solid fa-shield-check"></i> Validade de 1 ano</p>
+                        <a href="https://wa.me/5519981152090?text=Olá, quero saber mais sobre o certificado e-CPF A1." target="_blank" class="btn-comprar">Comprar e-CPF A1 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Plano 2 -->
+                    <div class="plano-card">
+                        <div class="plano-header">
+                            <h5>e-CNPJ A1</h5>
+                            <span class="tag-tipo">Pessoa Jurídica</span>
+                        </div>
+                        <p>Para empresas emitirem notas fiscais, acessar sistemas da Receita Federal e assinar documentos.</p>
+                        <p class="validade"><i class="fa-solid fa-shield-check"></i> Validade de 1 ano</p>
+                        <a href="https://wa.me/5519981152090?text=Olá, quero saber mais sobre o certificado e-CNPJ A1." target="_blank" class="btn-comprar">Comprar e-CNPJ A1 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Plano 3 -->
+                    <div class="plano-card">
+                        <div class="plano-header">
+                            <h5>e-CPF A3</h5>
+                            <span class="tag-tipo">Pessoa Física</span>
+                        </div>
+                        <p>Armazenado em token ou cartão criptográfico, oferecendo uma camada extra de segurança.</p>
+                        <p class="validade"><i class="fa-solid fa-shield-check"></i> Validade de até 3 anos</p>
+                        <a href="https://wa.me/5519981152090?text=Olá, quero saber mais sobre o certificado e-CPF A3." target="_blank" class="btn-comprar">Comprar e-CPF A3 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Plano 4 -->
+                    <div class="plano-card">
+                        <div class="plano-header">
+                            <h5>e-CNPJ A3</h5>
+                            <span class="tag-tipo">Pessoa Jurídica</span>
+                        </div>
+                        <p>Ideal para empresas que desejam armazenamento físico e maior proteção para operações digitais.</p>
+                        <p class="validade"><i class="fa-solid fa-shield-check"></i> Validade de até 3 anos</p>
+                        <a href="https://wa.me/5519981152090?text=Olá, quero saber mais sobre o certificado e-CNPJ A3." target="_blank" class="btn-comprar">Comprar e-CNPJ A3 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros -->
+    <section id="parceiro" class="nosso-parceiro">
+        <div class="container-parceiros">
+            <span class="section-badge">Parceiros</span>
+            <h3 class="titulo_solucao">Nossos Parceiros</h3>
+
+            <div class="slider-wrapper">
+
+                <button id="prevBtn" class="nav-btn prev-btn">&#10094;</button>
+
+                <div class="cards-slider" id="slider">
+
+                    <div class="card-parceiro">
+                        <div class="logo-area">
+                            <img src="logo-cardsinova.webp" alt="Inova">
+                        </div>
+                        <h4>Cards Inova</h4>
+                    </div>
+
+                    <div class="card-parceiro">
+                        <div class="logo-area">
+                            <img src="caminho/da/sua/logo2.png" alt="Advogada">
+                        </div>
+                        <h4>Advogada Fulana</h4>
+                    </div>
+
+                    <div class="card-parceiro">
+                        <div class="logo-area">
+                            <img src="caminho/da/sua/logo3.png" alt="Parceiro">
+                        </div>
+                        <h4>Outro Parceiro</h4>
+                    </div>
+                </div> <button id="nextBtn" class="nav-btn next-btn">&#10095;</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- clientes -->
+    <section id="cliente" class="nosso-cliente">
+        <div class="container-parceiros">
+            <span class="section-badge">Clientes</span>
+            <h3 class="titulo_solucao">Conheça nossos Clientes</h3>
+
+            <div class="slider-wrapper">
+
+                <button id="prevBtnClientes" class="nav-btn prev-btn">&#10094;</button>
+
+                <div class="cards-slider" id="slider-clientes">
+
+                    <div class="card-cliente">
+                        <div class="logo-area">
+                            <img src="logo-00burguer.png" alt="00 Burguer">
+                        </div>
+                        <h4>00 Burguer</h4>
+                    </div>
+
+                    <div class="card-cliente">
+                        <div class="logo-area">
+                            <img src="logo-fm-solutions.jpeg" alt="FM Solutions">
+                        </div>
+                        <h4>FM Solutions</h4>
+                    </div>
+
+                    <div class="card-cliente">
+                        <div class="logo-area">
+                            <img src="logo-tg-rh.png" alt="TG Rh">
+                        </div>
+                        <h4>TG Rh</h4>
+                    </div>
+                </div>
+                <button id="nextBtnClientes" class="nav-btn next-btn">&#10095;</button>
             </div>
         </div>
     </section>
@@ -257,6 +327,20 @@
                 </div>
 
                 <button id="btnFeedNext" class="feed-nav next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- quem somos -->
+    <section id="quem-somos" class="sobre">
+        <div class="container">
+            <!-- ALTERADO: usa divs (sem spans) e grid -->
+            <div class="sobre-img">
+                <img src="imagem_casal.jpeg" alt="Foto fundadores">
+            </div>
+            <div class="sobre-texto">
+                <h3>Quem Somos</h3>
+                <p>"A Evolvere é fruto da parceria de especialistas apaixonados por Administração, Contabilidade e Tecnologia. Unimos o cuidado de um atendimento próximo à robustez da inteligência de negócios, fornecendo as ferramentas exatas para que sua empresa prospere."</p>
             </div>
         </div>
     </section>
