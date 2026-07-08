@@ -104,7 +104,7 @@ body {
 .hero {
     background: var(--azul);
     color: #fff;
-    padding: 56px 0;
+    padding: 56px 0 30px 0; /* Menos espaço na parte inferior */
 }
 
 /* ALTERADO: padding uniforme */
@@ -164,28 +164,30 @@ body {
 }
 
 .hero-img img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 380px; /* Reduzido para ficar mais proporcional verticalmente */
     height: auto;
     display: block;
-    border-radius: 6px;
+    border-radius: 8px;
+    margin: auto;
 }
 
 /* ======= QUEM SOMOS ======= */
 .sobre {
-    padding: 64px 0;
+    padding: 40px 0 50px 0; /* Espaçamento reduzido */
 }
 
-/* ALTERADO: grid 2 colunas para foto + texto */
+/* ALTERADO: grid 2 colunas para foto + texto, com foto menor */
 .sobre .container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 32px;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
     align-items: center;
 }
 
 .sobre-img img {
     width: 100%;
-    max-width: 520px;
+    max-width: 350px;
     border-radius: 8px;
     display: block;
     margin: auto;
@@ -202,7 +204,24 @@ body {
 
 /* ======= SOLUÇÕES ======= */
 .servicos {
-    padding: 80px 0;
+    padding: 40px 0 60px 0; /* Diminuído o espaço superior */
+}
+
+/* Badge (Pílula) para os títulos das seções */
+.section-badge {
+    display: block;
+    width: max-content;
+    background-color: #d3d0d6; /* Roxo claro */
+    color: #3f3e40; /* Roxo escuro */
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-left: 0;
+    margin-right: auto; /* Alinha o bloco à esquerda */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .titulo_solucao {
@@ -308,6 +327,187 @@ body {
     color: var(--dourado);
 }
 
+/* ======= PLANOS ======= */
+.secao-planos {
+    padding: 40px 0 50px 0; /* Espaçamento reduzido */
+    background-color: #ffffff;
+}
+
+.planos-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr; /* O card principal um pouco menor que a soma dos 2 direitos */
+    gap: 30px;
+}
+
+/* Card Destaque (Esquerda) */
+.plano-destaque {
+    background: linear-gradient(135deg, var(--azul) 0%, #111a24 100%);
+    color: var(--branco);
+    border-radius: 16px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.destaque-icone {
+    font-size: 40px;
+    color: var(--dourado);
+    margin-bottom: 20px;
+}
+
+.plano-destaque h4 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.plano-destaque p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.destaque-lista {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.destaque-lista li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.destaque-lista i {
+    color: var(--dourado);
+    font-size: 18px;
+}
+
+.destaque-extra {
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.destaque-extra h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--dourado);
+}
+
+.extra-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.extra-tags span {
+    background: rgba(255,255,255,0.15);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.destaque-extra p {
+    font-size: 13px;
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+/* Cards Secundários (Direita) */
+.planos-secundarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.plano-card {
+    background: var(--branco);
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: var(--dourado);
+}
+
+.plano-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.plano-header h5 {
+    font-size: 20px;
+    color: var(--azul);
+    font-weight: 700;
+}
+
+.tag-tipo {
+    background: #f3ebf6;
+    color: #4a2366;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.plano-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Empurra o botão para baixo */
+}
+
+.plano-card .validade {
+    font-weight: 600;
+    color: var(--azul);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.plano-card .validade i {
+    color: var(--dourado);
+}
+
+.btn-comprar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background: #f4f6f8;
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: var(--dourado);
+    color: #fff;
+}
+
 
 
 
@@ -351,8 +551,14 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+/* Responsivo para celular */
+@media (max-width: 992px) {
+    .planos-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
+@media (max-width: 768px) {
     /* ALTERADO: empilha hero */
     .hero__wrap {
         flex-direction: column;
@@ -404,6 +610,10 @@ body {
     .sobre-texto {
         text-align: center;
     }
+
+    .planos-secundarios {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -414,7 +624,7 @@ body {
 .nosso-parceiro {
     background-color: #f9f9f9;
     /* Um cinza bem clarinho para diferenciar */
-    padding: 40px 0;
+    padding: 40px 0 50px 0; /* Espaçamento ajustado */
     width: 100%;
 }
 
@@ -502,7 +712,7 @@ body {
 
 .nosso-cliente {
     background-color: #ffffff; /* Fundo branco (o parceiro é cinza) */
-    padding: 40px 0;
+    padding: 40px 0 50px 0; /* Espaçamento ajustado */
     width: 100%;
 }
 
@@ -522,7 +732,7 @@ body {
 
 /* Container da Seção */
 .secao-feedback {
-    padding: 60px 0;
+    padding: 40px 0 50px 0; /* Espaçamento reduzido */
     background-color: #fff; /* Fundo da seção branco */
 }
 
@@ -646,7 +856,7 @@ body {
 /* Container Principal da Seção */
 .secao-contato-pro {
     background-color: var(--azul); /* Fundo escuro para destacar */
-    padding: 80px 0;
+    padding: 50px 0 60px 0; /* Espaçamento reduzido */
     color: var(--branco);
 }
 
