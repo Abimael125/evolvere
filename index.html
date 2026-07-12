@@ -2,10 +2,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0"> 
-
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        é para nivel de zoom 1.0 = 100% -->
     <meta name="description" content="A Evolvere Soluções Estratégicas une visão estratégica, contabilidade e TI para apoiar o crescimento de MEIs e pequenas empresas.">
-    <title>Evolvere Soluções Estratégicas</title>
+    <title>Evolvere Soluções Estratégicas</title>h
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3efbfb5430.js" crossorigin="anonymous"></script>
 
@@ -25,6 +25,7 @@
 
             <nav>
                 <ul class="menu" id="menuNav">
+                    <!-- lista não ordenada -->
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#quem-somos">Quem Somos</a></li>
                     <li><a href="#parceiro">Parceiros</a></li>
@@ -39,6 +40,8 @@
 
         </div>
     </header>
+
+    <!-- Hero / Início -->
     <section id="inicio" class="hero">
         <div class="container hero__wrap">
             <div class="hero-texto">
@@ -351,7 +354,7 @@
                         <h4>Cards Inova</h4>
                     </div>
 
-                    </div>
+                </div>
                 <button id="nextBtn" class="nav-btn next-btn">&#10095;</button>
             </div>
         </div>
@@ -538,78 +541,8 @@
             <p>&copy; Evolvere Soluções Estratégicas | CNPJ 51.063.580/0001-05 | Todos os direitos reservados</p>
             </div>
     </footer>
-    <!-- js parceiros e clientes -->
-    <script>
-        // --- FUNÇÃO PARA CRIAR CARROSSEL ---
-        function ativarCarrossel(idSlider, idBtnEsq, idBtnDir) {
-            const slider = document.getElementById(idSlider);
-            const prevBtn = document.getElementById(idBtnEsq);
-            const nextBtn = document.getElementById(idBtnDir);
-            const scrollAmount = 300; // Quanto rola por clique
-
-            if (slider && prevBtn && nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    slider.scrollLeft += scrollAmount;
-                });
-
-                prevBtn.addEventListener('click', () => {
-                    slider.scrollLeft -= scrollAmount;
-                });
-            } else {
-                console.warn(`Alerta: Elementos do carrossel ${idSlider} não encontrados.`);
-            }
-        }
-
-        // --- ATIVAR OS CARROSSÉIS ---
-
-        // 1. Ativa o de Parceiros
-        ativarCarrossel('slider', 'prevBtn', 'nextBtn');
-
-        // 2. Ativa o de Clientes (com os novos IDs)
-        ativarCarrossel('slider-clientes', 'prevBtnClientes', 'nextBtnClientes');
-    </script>
-
-    <!-- seção feedbacks -->
-    <script>
-        // --- LÓGICA EXCLUSIVA PARA FEEDBACKS ---
-        const trackFeedback = document.getElementById('trackFeedback');
-        const btnFeedPrev = document.getElementById('btnFeedPrev');
-        const btnFeedNext = document.getElementById('btnFeedNext');
-
-        if (trackFeedback && btnFeedPrev && btnFeedNext) {
-
-            // Calcula a largura do card + o gap (espaço)
-            // 320px do card + 30px do gap = 350px
-            const moveAmount = 350;
-
-            btnFeedNext.addEventListener('click', () => {
-                trackFeedback.scrollLeft += moveAmount;
-            });
-
-            btnFeedPrev.addEventListener('click', () => {
-                trackFeedback.scrollLeft -= moveAmount;
-            });
-        }
-    </script>
-
-    <!-- seção soluções -->    
-    <script>
-        function toggleCard(element) {
-            // 1. Verifica se o card clicado já está aberto
-            const isAlreadyActive = element.classList.contains('ativo');
-
-            // 2. Fecha TODOS os cards primeiro (efeito sanfona)
-            const allCards = document.querySelectorAll('.card');
-            allCards.forEach(card => {
-                card.classList.remove('ativo');
-            });
-
-            // 3. Se o card clicado NÃO estava aberto, abrimos ele agora
-            if (!isAlreadyActive) {
-                element.classList.add('ativo');
-            }
-        }
-    </script>
+    <!-- Scripts Centralizados -->
+    <script src="scripts.js"></script>
 
     <!-- botão zap -->
 
@@ -619,39 +552,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Menu Mobile Script -->
-    <script>
-        // --- SCRIPT PARA AS ABAS DOS PACOTES CONTÁBEIS ---
-        document.querySelectorAll('.tab-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-                
-                button.classList.add('active');
-                document.getElementById(button.getAttribute('data-tab')).classList.add('active');
-            });
-        });
-        // ------------------------------------------------
-    </script>
 
-    <!-- Menu Mobile Script -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const menuNav = document.getElementById('menuNav');
-
-        if (menuToggle && menuNav) {
-            menuToggle.addEventListener('click', () => {
-                menuNav.classList.toggle('active');
-            });
-
-            // Fecha o menu ao clicar em algum link
-            menuNav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menuNav.classList.remove('active');
-                });
-            });
-        }
-    </script>
 </body>
 
 </html>
