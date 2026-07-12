@@ -42,6 +42,21 @@
 
                 </ul>
             </nav>
+            </main>
+
+    <!-- Script para as Abas dos Pacotes Contábeis -->
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                button.classList.add('active');
+                document.getElementById(button.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+    </script>
+
         </div>
     </header>
 
@@ -112,6 +127,149 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- pacotes contábeis -->
+    <section id="pacotes-contabeis" class="secao-pacotes">
+        <div class="container">
+            <span class="section-badge">Contabilidade</span>
+            <h3 class="titulo_solucao" style="margin-bottom: 30px;">Pacotes de Serviços Contábeis e Controladoria</h3>
+
+            <div class="tabs-container">
+                <!-- Botões das Abas -->
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="tab-mei">MEI</button>
+                    <button class="tab-btn" data-tab="tab-simples">Simples Nacional</button>
+                    <button class="tab-btn" data-tab="tab-lucro">Lucro Presumido</button>
+                </div>
+
+                <!-- Conteúdo MEI -->
+                <div id="tab-mei" class="tab-content active">
+                    <p class="tab-subtitle">Ideal para quem está começando ou possui operação simplificada</p>
+                    
+                    <div class="tab-grid">
+                        <div class="tab-box">
+                            <h4><i class="fa-solid fa-check-circle"></i> Serviços inclusos</h4>
+                            <ul>
+                                <li>Abertura, alteração e regularização de MEI</li>
+                                <li>Emissão mensal do DAS</li>
+                                <li>Entrega da Declaração Anual (DASN-SIMEI)</li>
+                                <li>Controle básico de faturamento</li>
+                                <li>Orientação sobre limite de receita</li>
+                                <li>Suporte para dúvidas fiscais e operacionais</li>
+                                <li>Baixa de empresa (quando necessário)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-box">
+                            <h4><i class="fa-solid fa-plus-circle"></i> Serviços adicionais</h4>
+                            <ul>
+                                <li>Alteração cadastral (endereço, atividades, dados)</li>
+                                <li>Transição de MEI para ME</li>
+                            </ul>
+                            <div class="tab-diferencial">
+                                <strong>Diferencial:</strong> Atendimento ágil com visão de crescimento estruturado do negócio.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Simples Nacional -->
+                <div id="tab-simples" class="tab-content">
+                    <p class="tab-subtitle">Para empresas que buscam praticidade tributária com controle eficiente</p>
+                    
+                    <div class="tab-grid">
+                        <div class="tab-box">
+                            <h4><i class="fa-solid fa-check-circle"></i> Serviços inclusos</h4>
+                            <ul>
+                                <li>Apuração mensal de tributos (DAS)</li>
+                                <li>Envio de obrigações acessórias (PGDAS-D, DEFIS, etc.)</li>
+                                <li>Emissão e conferência de guias</li>
+                                <li>Controle e acompanhamento fiscal</li>
+                                <li>Suporte em emissão de notas fiscais</li>
+                                <li>Relatórios gerenciais básicos</li>
+                                <li>Regularização de pendências fiscais</li>
+                            </ul>
+                        </div>
+                        <div class="tab-box">
+                            <h4><i class="fa-solid fa-users"></i> Departamento Pessoal</h4>
+                            <ul>
+                                <li>Processamento de folha de pagamento</li>
+                                <li>Cálculo de encargos (INSS, FGTS, etc.)</li>
+                                <li>Admissão, demissão e férias</li>
+                                <li>Envio de eSocial, SEFIP e obrigações trabalhistas</li>
+                                <li>Emissão de holerites</li>
+                            </ul>
+                            <h4 style="margin-top:20px;"><i class="fa-solid fa-building"></i> Serviços societários</h4>
+                            <ul>
+                                <li>Alterações contratuais (CNPJ)</li>
+                                <li>Inclusão/retirada de sócios</li>
+                                <li>Alteração de atividades (CNAE) e endereço</li>
+                            </ul>
+                            <div class="tab-diferencial">
+                                <strong>Diferencial:</strong> Redução de carga tributária com segurança e gestão integrada fiscal + trabalhista.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Lucro Presumido -->
+                <div id="tab-lucro" class="tab-content">
+                    <p class="tab-subtitle">Indicado para empresas com maior faturamento ou estratégia tributária diferenciada</p>
+                    
+                    <div class="tab-grid">
+                        <div class="tab-box">
+                            <h4><i class="fa-solid fa-check-circle"></i> Serviços inclusos</h4>
+                            <ul>
+                                <li>Apuração de IRPJ, CSLL, PIS e COFINS</li>
+                                <li>Apuração de ISS e/ou ICMS conforme atividade</li>
+                                <li>Escrituração fiscal completa</li>
+                                <li>Entrega de obrigações acessórias (DCTF, EFD, etc.)</li>
+                                <li>Emissão e conferência de guias tributárias</li>
+                                <li>Planejamento tributário básico</li>
+                                <li>Relatórios gerenciais e acompanhamento de resultados</li>
+                            </ul>
+                        </div>
+                        <div class="tab-box">
+                            <h4><i class="fa-solid fa-users"></i> Departamento Pessoal</h4>
+                            <ul>
+                                <li>Processamento completo da folha</li>
+                                <li>Encargos trabalhistas e previdenciários</li>
+                                <li>Gestão de admissões, demissões e férias</li>
+                                <li>Obrigações acessórias (eSocial, DCTFWeb, FGTS)</li>
+                            </ul>
+                            <h4 style="margin-top:20px;"><i class="fa-solid fa-building"></i> Serviços societários</h4>
+                            <ul>
+                                <li>Alterações contratuais e reestruturações societárias</li>
+                                <li>Planejamento societário</li>
+                                <li>Atualizações cadastrais junto aos órgãos competentes</li>
+                            </ul>
+                            <div class="tab-diferencial">
+                                <strong>Diferencial:</strong> Atuação estratégica com foco em economia tributária e crescimento estruturado.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Fim tabs-container -->
+
+            <!-- Serviços Complementares Fixos -->
+            <div class="servicos-complementares">
+                <h4><i class="fa-solid fa-star"></i> Serviços Complementares (Para todos os regimes)</h4>
+                <div class="complementares-grid">
+                    <ul>
+                        <li><i class="fa-solid fa-check" style="color: #28a745;"></i> BPO Financeiro (contas a pagar e receber)</li>
+                        <li><i class="fa-solid fa-check" style="color: #28a745;"></i> Controladoria estratégica</li>
+                        <li><i class="fa-solid fa-check" style="color: #28a745;"></i> Planejamento tributário avançado</li>
+                        <li><i class="fa-solid fa-check" style="color: #28a745;"></i> Regularização fiscal e parcelamentos</li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa-solid fa-check" style="color: #28a745;"></i> Análise de custos e formação de preço</li>
+                        <li><i class="fa-solid fa-check" style="color: #28a745;"></i> Implantação de processos e indicadores (KPIs)</li>
+                        <li><i class="fa-solid fa-check" style="color: #28a745;"></i> Consultoria empresarial</li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
     </section>
 
