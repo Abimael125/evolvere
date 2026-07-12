@@ -327,6 +327,163 @@ body {
     color: var(--dourado);
 }
 
+/* ======= PACOTES CONTÁBEIS (TABS) ======= */
+.secao-pacotes {
+    padding: 40px 0 50px 0;
+    background-color: #f9f9f9;
+}
+
+.tabs-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.tabs-header {
+    display: flex;
+    background: var(--azul);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 20px;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.tab-btn:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+}
+
+.tab-btn.active {
+    color: var(--dourado);
+    border-bottom: 4px solid var(--dourado);
+    background: rgba(255,255,255,0.1);
+}
+
+.tab-content {
+    display: none;
+    padding: 40px;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-subtitle {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.tab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.tab-box h4 {
+    font-size: 20px;
+    color: var(--azul);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tab-box h4 i {
+    color: var(--dourado);
+}
+
+.tab-box ul {
+    list-style: none;
+}
+
+.tab-box ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 15px;
+    color: #444;
+}
+
+.tab-box ul li::before {
+    content: "•";
+    color: var(--dourado);
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+.tab-diferencial {
+    margin-top: 20px;
+    background: rgba(200, 161, 84, 0.1);
+    padding: 15px;
+    border-left: 4px solid var(--dourado);
+    border-radius: 4px;
+    color: var(--azul);
+    font-size: 15px;
+}
+
+/* Serviços Complementares Fixos */
+.servicos-complementares {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.servicos-complementares h4 {
+    font-size: 22px;
+    color: var(--azul);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.servicos-complementares h4 i {
+    color: var(--dourado);
+    margin-right: 10px;
+}
+
+.complementares-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.complementares-grid ul {
+    list-style: none;
+}
+
+.complementares-grid ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* ======= PLANOS ======= */
 .secao-planos {
     padding: 40px 0 50px 0; /* Espaçamento reduzido */
@@ -555,6 +712,20 @@ body {
 @media (max-width: 992px) {
     .planos-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tab-btn {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+    .tab-content {
+        padding: 20px;
+    }
+    .tab-grid, .complementares-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
